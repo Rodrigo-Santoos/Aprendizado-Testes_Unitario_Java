@@ -13,10 +13,12 @@ import java.util.Date;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
 import org.junit.rules.ExpectedException;
+import org.junit.runners.MethodSorters;
 
 import br.ce.wcaquino.entidades.Filme;
 import br.ce.wcaquino.entidades.Locacao;
@@ -24,6 +26,7 @@ import br.ce.wcaquino.entidades.Usuario;
 import br.ce.wcaquino.exceptions.FilmeSemEstoqueException;
 import br.ce.wcaquino.exceptions.LocadoraException;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class LocacaoServiceTest {
 
 	@Rule
@@ -52,7 +55,7 @@ public class LocacaoServiceTest {
 
 	
 	@Test
-	public void testeLocacao() throws Exception {
+	public void t1_testeLocacao() throws Exception {
 		//cenario
 		System.out.println(contador++);
 		Usuario usuario = new Usuario("Usuario 1");
@@ -68,7 +71,7 @@ public class LocacaoServiceTest {
 	}
 	
 	@Test(expected = FilmeSemEstoqueException.class)
-	public void testLocacao_filmeSemEstoque() throws Exception{
+	public void t2_testLocacao_filmeSemEstoque() throws Exception{
 		//cenario
 		System.out.println(contador++);
 		Usuario usuario = new Usuario("Usuario 1");
@@ -79,7 +82,7 @@ public class LocacaoServiceTest {
 	}
 	
 	@Test
-	public void testLocacao_usuarioVazio() throws FilmeSemEstoqueException{
+	public void t3_testLocacao_usuarioVazio() throws FilmeSemEstoqueException{
 		//cenario
 		System.out.println(contador++);
 		Filme filme = new Filme("Filme 2", 1, 4.0);
@@ -95,7 +98,7 @@ public class LocacaoServiceTest {
 	
 
 	@Test
-	public void testLocacao_FilmeVazio() throws FilmeSemEstoqueException, LocadoraException{
+	public void t4_testLocacao_FilmeVazio() throws FilmeSemEstoqueException, LocadoraException{
 		//cenario
 		System.out.println(contador++);
 		Usuario usuario = new Usuario("Usuario 1");

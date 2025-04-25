@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.junit.Assert"/>
+    <fullyQualifiedTypeName name="org.hamcrest.CoreMatchers"/>
+    <fullyQualifiedTypeName name="org.junit.Rule"/>
+    <fullyQualifiedTypeName name="org.junit.rules.ErrorCollector"/>
+    <fullyQualifiedTypeName name="javax.swing.DefaultRowSorter"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="br.ce.wcaquino.servicos.LocacaoService"/>
+</qualifiedTypeNameHistroy>
